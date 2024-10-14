@@ -24,5 +24,17 @@ namespace SAMSA
             reportIssuesForm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LocalEventsForm localEventsForm = new LocalEventsForm();
+            localEventsForm.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            loginPage.Visible = true;
+        }
     }
 }

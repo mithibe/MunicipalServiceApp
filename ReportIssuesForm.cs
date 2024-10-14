@@ -13,14 +13,40 @@ namespace SAMSA
 {
     public partial class ReportIssuesForm : Form
     {
+        private int formCompletion = 0;
         public ReportIssuesForm()
         {
             InitializeComponent();
             // Initially hide the PictureBox and Label used for preview
             pictureBoxPreview.Visible = false;
             lblFilePreview.Visible = false;
+
+            // Initially set progress to 0
+            progressBarFormCompletion.Value = 0;
+            lblProgressStatus.Text = "Form Completion: 0%";
         }
 
+        private void UpdateProgress()
+        {
+            // Calculate progress based on form fields
+            formCompletion = 0;
+
+            if (!string.IsNullOrEmpty(txtLocation.Text))
+                formCompletion += 25; //25% for location
+
+            if (cboCategory.SelectedItem != null)
+                formCompletion += 25; // 25% for category
+
+            if (!string.IsNullOrEmpty(rtbDescription.Text))
+                formCompletion += 25; // 25% for description
+
+            if (pictureBoxPreview.Image != null || !string.IsNullOrEmpty(lblFilePreview.Text))
+                formCompletion += 25; // 25% for media attachment
+
+            // Update the progress bar and label
+            progressBarFormCompletion.Value = formCompletion;
+            lblProgressStatus.Text = $"Form Completion: {formCompletion}%";
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -47,6 +73,7 @@ namespace SAMSA
                 }
                 // Process the file (e.g., store the file path)
             }
+            UpdateProgress();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -62,7 +89,30 @@ namespace SAMSA
 
             // Show confirmation or progress
             MessageBox.Show("Issue submitted successfully!");
-            this.Close();
+            //this.Close();
+        }
+
+        private void txtLocation_TextChanged(object sender, EventArgs e)
+        {
+            UpdateProgress();
+        }
+
+        private void cboCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateProgress();
+        }
+
+        private void rtbDescription_TextChanged(object sender, EventArgs e)
+        {
+            UpdateProgress();
+        }
+
+        private void btnBackToMainMenu_Click(object sender, EventArgs e)
+        {
+            // Navigate back to the main menu form
+            this.Hide();
+            var mainForm = new MainForm();
+            mainForm.Show();
         }
     }
 
