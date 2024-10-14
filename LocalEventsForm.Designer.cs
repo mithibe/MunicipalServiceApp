@@ -111,7 +111,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Gold;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Location = new System.Drawing.Point(339, 24);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
@@ -141,7 +141,7 @@
             // btnBackToMainMenu
             // 
             this.btnBackToMainMenu.BackColor = System.Drawing.Color.DarkRed;
-            this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToMainMenu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToMainMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBackToMainMenu.Location = new System.Drawing.Point(638, 9);

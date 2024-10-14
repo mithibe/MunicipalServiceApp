@@ -91,7 +91,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Gold;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(45, 294);
             this.btnLogin.Name = "btnLogin";
@@ -104,7 +104,7 @@
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Gold;
-            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegister.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Location = new System.Drawing.Point(45, 294);
@@ -135,7 +135,7 @@
             // btnToggleLoginRegister
             // 
             this.btnToggleLoginRegister.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnToggleLoginRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnToggleLoginRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToggleLoginRegister.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToggleLoginRegister.ForeColor = System.Drawing.Color.White;
             this.btnToggleLoginRegister.Location = new System.Drawing.Point(211, 294);

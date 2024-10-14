@@ -79,7 +79,7 @@
             // btnAttachMedia
             // 
             this.btnAttachMedia.BackColor = System.Drawing.Color.Gold;
-            this.btnAttachMedia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAttachMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAttachMedia.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAttachMedia.ForeColor = System.Drawing.Color.Black;
             this.btnAttachMedia.Location = new System.Drawing.Point(466, 104);
@@ -93,6 +93,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(293, 405);
             this.button2.Name = "button2";
@@ -170,7 +171,7 @@
             // btnBackToMainMenu
             // 
             this.btnBackToMainMenu.BackColor = System.Drawing.Color.DarkRed;
-            this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToMainMenu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToMainMenu.ForeColor = System.Drawing.Color.White;
             this.btnBackToMainMenu.Location = new System.Drawing.Point(496, 9);
