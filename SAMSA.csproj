@@ -67,11 +67,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportIssuesForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="User.cs" />
+    <Compile Include="UserControls\LocalEventsUserControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReportIssuesForm.Designer.cs">
-      <DependentUpon>ReportIssuesForm.cs</DependentUpon>
+    <Compile Include="UserControls\LocalEventsUserControl.Designer.cs">
+      <DependentUpon>LocalEventsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReportIssuesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ReportIssuesUserControl.Designer.cs">
+      <DependentUpon>ReportIssuesUserControl.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LocalEventsForm.resx">
       <DependentUpon>LocalEventsForm.cs</DependentUpon>
@@ -91,8 +98,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ReportIssuesForm.resx">
-      <DependentUpon>ReportIssuesForm.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\LocalEventsUserControl.resx">
+      <DependentUpon>LocalEventsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ReportIssuesUserControl.resx">
+      <DependentUpon>ReportIssuesUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -108,7 +118,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="users.txt" />
+    <Folder Include="Images\Announcements\" />
+    <Folder Include="Images\Events\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

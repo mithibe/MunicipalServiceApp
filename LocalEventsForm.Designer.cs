@@ -33,6 +33,7 @@
             this.eventDate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.eventCategory = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.eventType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cboCategory = new System.Windows.Forms.ComboBox();
             this.dtpEventDate = new System.Windows.Forms.DateTimePicker();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -40,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lstRecommendations = new System.Windows.Forms.ListBox();
             this.btnBackToMainMenu = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,7 +60,8 @@
             this.lstViewEvents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.eventDate,
             this.eventName,
-            this.eventCategory});
+            this.eventCategory,
+            this.eventType});
             this.lstViewEvents.HideSelection = false;
             this.lstViewEvents.Location = new System.Drawing.Point(14, 96);
             this.lstViewEvents.Name = "lstViewEvents";
@@ -80,11 +84,16 @@
             this.eventCategory.Text = "Category";
             this.eventCategory.Width = 82;
             // 
+            // eventType
+            // 
+            this.eventType.Text = "Type";
+            // 
             // cboCategory
             // 
             this.cboCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.Items.AddRange(new object[] {
+            "All",
             "Sports",
             "Politics",
             "Roads"});
@@ -140,11 +149,12 @@
             // 
             // btnBackToMainMenu
             // 
+            this.btnBackToMainMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBackToMainMenu.BackColor = System.Drawing.Color.DarkRed;
             this.btnBackToMainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackToMainMenu.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToMainMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBackToMainMenu.Location = new System.Drawing.Point(638, 9);
+            this.btnBackToMainMenu.Location = new System.Drawing.Point(1009, 9);
             this.btnBackToMainMenu.Name = "btnBackToMainMenu";
             this.btnBackToMainMenu.Size = new System.Drawing.Size(150, 50);
             this.btnBackToMainMenu.TabIndex = 8;
@@ -152,12 +162,22 @@
             this.btnBackToMainMenu.UseVisualStyleBackColor = false;
             this.btnBackToMainMenu.Click += new System.EventHandler(this.btnBackToMainMenu_Click);
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(830, 106);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(313, 262);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 9;
+            this.pictureBox.TabStop = false;
+            // 
             // LocalEventsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1171, 450);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.btnBackToMainMenu);
             this.Controls.Add(this.lstRecommendations);
             this.Controls.Add(this.label2);
@@ -169,6 +189,7 @@
             this.Controls.Add(this.label1);
             this.Name = "LocalEventsForm";
             this.Text = "LocalEventsForm";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,5 +209,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lstRecommendations;
         private System.Windows.Forms.Button btnBackToMainMenu;
+        private System.Windows.Forms.ColumnHeader eventType;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }

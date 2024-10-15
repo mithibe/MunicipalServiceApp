@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SAMSA
 {
-    public partial class LocalEventsForm : Form
+    public partial class LocalEventsUserControl : UserControl
     {
         // Data Structures
         private SortedDictionary<DateTime, List<EventOrAnnouncement>> eventsDictionary = new SortedDictionary<DateTime, List<EventOrAnnouncement>>();
@@ -15,7 +15,7 @@ namespace SAMSA
         private HashSet<string> eventCategories = new HashSet<string>();
         private int maxHistory = 5; // Limit for search history queue
 
-        public LocalEventsForm()
+        public LocalEventsUserControl()
         {
             InitializeComponent();
 
@@ -25,10 +25,10 @@ namespace SAMSA
 
             lstViewEvents.SelectedIndexChanged += lstViewEvents_SelectedIndexChanged; // Attach the selection changed event
 
-            this.Load += new EventHandler(LocalEventsForm_Load); // Attach the Load event
+            this.Load += new EventHandler(LocalEventsUserControl_Load); // Attach the Load event
         }
 
-        private void LocalEventsForm_Load(object sender, EventArgs e)
+        private void LocalEventsUserControl_Load(object sender, EventArgs e)
         {
             // Load events from file
             LoadEvents();
@@ -61,13 +61,6 @@ namespace SAMSA
             // Optionally: Add the search term to search history, refresh recommendations, etc.
             AddToSearchHistory(searchTerm);
             DisplayRecommendations();
-        }
-
-        private void btnBackToMainMenu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            var mainForm = new MainForm();
-            mainForm.Show();
         }
 
         // Method to add an event to the dictionary and update the UI

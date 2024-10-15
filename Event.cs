@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 
 namespace SAMSA
 {
-    public class Event
+    // Custom event class
+    public class EventOrAnnouncement
     {
         public string Name { get; set; }
         public string Category { get; set; }
         public DateTime Date { get; set; }
+        public string Type { get; set; }
+        public string ImagePath { get; set; } // Added property for image path
 
-        public Event(string name, string category, DateTime date)
+        public EventOrAnnouncement(string name, string category, DateTime date, string type, string imagePath)
         {
             Name = name;
             Category = category;
             Date = date;
+            Type = type;
+            ImagePath = imagePath; // Initialize image path
         }
     }
 }
+
+

@@ -15,26 +15,38 @@ namespace SAMSA
         public MainForm()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized; // Set the form to open maximized
+
+            // Initalize user controls
+            reportIssuesUserControl = new ReportIssuesUserControl();
+            localEventsUserControl = new LocalEventsUserControl();
+
+            // Add the user controls to the form's controls but keep them hidden initially
+            reportIssuesUserControl.Visible = false;
+            localEventsUserControl.Visible = false;
+            this.Controls.Add(reportIssuesUserControl);
+            this.Controls.Add(localEventsUserControl);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnReportIssues_Click(object sender, EventArgs e)
         {
-            // Open the Report Issues form
-            ReportIssuesForm reportIssuesForm = new ReportIssuesForm();
-            reportIssuesForm.Show();
-            this.Hide();
+            localEventsUserControl.Visible = false;
+            reportIssuesUserControl.Visible = true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnLocalEventsAndAnnouncements_Click(object sender, EventArgs e)
         {
-            LocalEventsForm localEventsForm = new LocalEventsForm();
-            localEventsForm.Show();
-            this.Hide();
+            // Hide report issues user control and show local events user control
+            reportIssuesUserControl.Visible = false;
+            localEventsUserControl.Visible = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            // Show login page and hide both user controls
             loginPage.Visible = true;
+            localEventsUserControl.Visible = false;
+            reportIssuesUserControl.Visible = false;
         }
     }
 }

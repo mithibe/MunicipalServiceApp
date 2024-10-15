@@ -1,2 +1,0 @@
-john_doe,1234,User
-jane_doe,abcd,Employee
